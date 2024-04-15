@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="userprofileRowModel" type="com.project.app.modules.home.data.model.UserprofileRowModel"/>
+    </data>
+    <LinearLayout android:id="@+id/linearUserprofile"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent" android:orientation="vertical">
+        <ImageView android:id="@+id/imageAresoneOne"
+            android:layout_gravity="center_horizontal"
+            android:layout_height="@dimen/_140pxh"
+            android:layout_width="@dimen/_162pxh"
+            android:scaleType="fitXY" cornerRadius="@{@dimen/_8pxh}"
+            imageRes="@{@drawable/img_ares_1}"
+            tools:ignore="ContentDescription" tools:src="@drawable/img_ares_1"/>
+        <LinearLayout android:gravity="end"
+            android:id="@+id/linearRowares"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_2pxv"
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:paddingBottom="@dimen/_10pxv"
+            android:paddingEnd="@dimen/_18pxh"
+            android:paddingStart="@dimen/_18pxh"
+            android:paddingTop="@dimen/_10pxv" style="@style/groupStylegray_300cornerRadius">
+            <LinearLayout android:id="@+id/linearColumnares"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_36pxh"
+                android:layout_marginTop="@dimen/_2pxv"
+                android:layout_width="wrap_content" android:orientation="vertical">
+                <TextView android:ellipsize="end"
+                    android:gravity="center_horizontal"
+                    android:id="@+id/txtAres"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:lineSpacingExtra="@dimen/_5pxh"
+                    android:singleLine="true"
+                    android:text="@{userprofileRowModel.txtAres}"
+                    style="@style/txtPlayfairDisplayromanbold14" tools:text="@string/lbl_ares"/>
+                <TextView android:ellipsize="end"
+                    android:gravity="center_horizontal"
+                    android:id="@+id/txtRp100000"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:lineSpacingExtra="@dimen/_3pxh"
+                    android:singleLine="true"
+                    android:text="@{userprofileRowModel.txtRp100000}"
+                    style="@style/txtLatosemibold11" tools:text="@string/lbl_rp100_000"/>
+            </LinearLayout>
+            <ImageView android:id="@+id/imageAresTwo"
+                android:layout_height="@dimen/_24pxh"
+                android:layout_marginBottom="@dimen/_8pxv"
+                android:layout_marginStart="@dimen/_11pxh"
+                android:layout_marginTop="@dimen/_1pxv"
+                android:layout_width="@dimen/_24pxh"
+                android:scaleType="fitXY"
+                android:src="@drawable/img_favorite"
+                tools:ignore="ContentDescription" tools:src="@drawable/img_favorite"/>
+        </LinearLayout>
+    </LinearLayout>
+</layout>

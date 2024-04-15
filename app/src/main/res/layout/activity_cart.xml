@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="cartVM" type="com.project.app.modules.cart.data.viewmodel.CartVM"/>
+    </data>
+    <LinearLayout android:id="@+id/linearColumnlogoTwoOne"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical" style="@style/groupStylegray_50">
+        <androidx.core.widget.NestedScrollView
+            android:clipToPadding="false" android:fillViewport="true"
+            android:gravity="center_horizontal"
+            android:id="@+id/scrollViewScrollview"
+            android:layout_height="0dp"
+            android:layout_marginTop="@dimen/_9pxv"
+            android:layout_weight="1" android:layout_width="match_parent">
+            <FrameLayout android:id="@+id/frameCart"
+                android:layout_height="@dimen/_819pxv"
+                android:layout_marginEnd="@dimen/_7pxh"
+                android:layout_marginStart="@dimen/_7pxh" android:layout_width="@dimen/_375pxh">
+                <LinearLayout android:id="@+id/linearColumnarrowleft"
+                    android:layout_gravity="center"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:orientation="vertical"
+                    android:paddingHorizontal="@dimen/_6pxh"
+                    android:paddingVertical="@dimen/_6pxv" style="@style/groupStylewhite_A700">
+                    <LinearLayout android:id="@+id/linearTitle"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content" android:orientation="horizontal">
+                        <ImageView android:id="@+id/imageArrowleftOne"
+                            android:layout_gravity="center_vertical"
+                            android:layout_height="@dimen/_32pxh"
+                            android:layout_width="@dimen/_32pxh"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/img_arrow_left_blue_gray_800"
+                            tools:ignore="ContentDescription" tools:src="@drawable/img_arrow_left_blue_gray_800"/>
+                        <TextView android:ellipsize="end"
+                            android:id="@+id/txtCart"
+                            android:layout_gravity="center_vertical"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/_6pxv"
+                            android:layout_marginStart="@dimen/_141pxh"
+                            android:layout_marginTop="@dimen/_6pxv"
+                            android:layout_width="wrap_content"
+                            android:lineSpacingExtra="@dimen/_3pxh"
+                            android:singleLine="true"
+                            android:text="@{cartVM.cartModel.txtCart}"
+                            style="@style/txtWorkSanssemibold16_1" tools:text="@string/lbl_cart"/>
+                    </LinearLayout>
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:gravity="center_horizontal"
+                        android:id="@+id/recyclerUserprofile"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/_13pxh"
+                        android:layout_marginStart="@dimen/_8pxh"
+                        android:layout_marginTop="@dimen/_26pxv"
+                        android:layout_width="match_parent"
+                        android:nestedScrollingEnabled="false"
+                        android:orientation="vertical"
+                        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                        itemSpace="@{@dimen/_25pxh}" tools:itemCount="4" tools:listitem="@layout/row_userprofile1"/>
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:drawablePadding="@dimen/_15pxh"
+                        android:ellipsize="end" android:gravity="center"
+                        android:id="@+id/btnGoToCheckout"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/_67pxv"
+                        android:layout_marginEnd="@dimen/_16pxh"
+                        android:layout_marginStart="@dimen/_12pxh"
+                        android:layout_marginTop="@dimen/_48pxv"
+                        android:layout_width="match_parent"
+                        android:letterSpacing="0.06"
+                        android:paddingBottom="@dimen/_17pxv"
+                        android:paddingEnd="@dimen/_18pxh"
+                        android:paddingStart="@dimen/_30pxh"
+                        android:paddingTop="@dimen/_17pxv"
+                        android:singleLine="true"
+                        android:text="@string/lbl_go_to_checkout"
+                        android:textAllCaps="true"
+                        style="@style/btnSolidRoundedOutline" tools:text="@string/lbl_go_to_checkout"/>
+                </LinearLayout>
+                <ImageView android:id="@+id/imageLogotwoOne"
+                    android:layout_gravity="top|end"
+                    android:layout_height="@dimen/_59pxh"
+                    android:layout_marginEnd="@dimen/_13pxh"
+                    android:layout_width="@dimen/_70pxh"
+                    android:scaleType="fitXY"
+                    imageRes="@{@drawable/img_logo_1}"
+                    tools:ignore="ContentDescription" tools:src="@drawable/img_logo_1"/>
+            </FrameLayout>
+        </androidx.core.widget.NestedScrollView>
+    </LinearLayout>
+</layout>

@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="paymentSuccesfulVM" type="com.project.app.modules.paymentsuccesful.data.viewmodel.PaymentSuccesfulVM"/>
+    </data>
+    <LinearLayout android:id="@+id/linearPaymentSuccesful"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:paddingEnd="@dimen/_25pxh"
+        android:paddingStart="@dimen/_25pxh" style="@style/groupStylegray_50">
+        <ImageButton
+            android:background="@drawable/rectangle_bg_gray_900_01_radius_36"
+            android:id="@+id/btnCheckmarkOne"
+            android:layout_gravity="center_horizontal"
+            android:layout_height="@dimen/_72pxh"
+            android:layout_marginTop="@dimen/_52pxv"
+            android:layout_width="@dimen/_72pxh"
+            android:paddingHorizontal="@dimen/_16pxh"
+            android:paddingVertical="@dimen/_16pxv"
+            android:scaleType="fitCenter"
+            android:src="@drawable/img_checkmark" tools:ignore="ContentDescription"/>
+        <TextView android:gravity="end"
+            android:id="@+id/txtCongratsyour"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_4pxh"
+            android:layout_marginStart="@dimen/_30pxh"
+            android:layout_marginTop="@dimen/_21pxv"
+            android:layout_width="match_parent"
+            android:letterSpacing="0.03"
+            android:text="@{paymentSuccesfulVM.paymentSuccesfulModel.txtCongratsyour}"
+            style="@style/txtWorkSansbold24" tools:text="@string/msg_congrats_your_order"/>
+        <TextView android:alpha="0.5" android:id="@+id/txtDescription"
+            android:layout_gravity="center_horizontal"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:lineSpacingExtra="@dimen/_6pxh"
+            android:text="@{paymentSuccesfulVM.paymentSuccesfulModel.txtDescription}"
+            style="@style/txtLatoregular12" tools:text="@string/msg_your_items_has_been"/>
+        <androidx.appcompat.widget.AppCompatButton
+            android:ellipsize="end" android:gravity="center"
+            android:id="@+id/btnTrackOrder"
+            android:layout_gravity="center_horizontal"
+            android:layout_height="@dimen/_52pxv"
+            android:layout_marginTop="@dimen/_8pxv"
+            android:layout_width="@dimen/_335pxh"
+            android:letterSpacing="0.06"
+            android:paddingBottom="@dimen/_17pxv"
+            android:paddingEnd="@dimen/_30pxh"
+            android:paddingStart="@dimen/_30pxh"
+            android:paddingTop="@dimen/_17pxv" android:singleLine="true"
+            android:text="@string/lbl_track_order"
+            android:textAllCaps="true"
+            style="@style/btnSolidRoundedOutline" tools:text="@string/lbl_track_order"/>
+        <androidx.appcompat.widget.AppCompatButton
+            android:ellipsize="end" android:gravity="center"
+            android:id="@+id/btnContinue"
+            android:layout_gravity="center_horizontal"
+            android:layout_height="@dimen/_52pxv"
+            android:layout_marginTop="@dimen/_18pxv"
+            android:layout_width="@dimen/_335pxh"
+            android:letterSpacing="0.06"
+            android:paddingBottom="@dimen/_17pxv"
+            android:paddingEnd="@dimen/_30pxh"
+            android:paddingStart="@dimen/_30pxh"
+            android:paddingTop="@dimen/_17pxv" android:singleLine="true"
+            android:text="@string/msg_continue_shopping"
+            android:textAllCaps="true"
+            style="@style/btnSolidRoundedOutline" tools:text="@string/msg_continue_shopping"/>
+        <TextView android:ellipsize="end" android:id="@+id/txtBack"
+            android:layout_gravity="center_horizontal"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_15pxv"
+            android:layout_width="wrap_content"
+            android:letterSpacing="0.06" android:singleLine="true"
+            android:text="@{paymentSuccesfulVM.paymentSuccesfulModel.txtBack}"
+            android:textAllCaps="true" style="@style/txtWorkSansbold15" tools:text="@string/lbl_back"/>
+    </LinearLayout>
+</layout>
