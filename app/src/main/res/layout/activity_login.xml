@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
-    <data>
-        <variable name="loginVM" type="com.project.app.modules.login.data.viewmodel.LoginVM"/>
-    </data>
+
     <LinearLayout android:id="@+id/linearLogin"
         android:layout_height="match_parent"
         android:layout_width="match_parent"
@@ -98,7 +96,7 @@
                     android:drawableStart="@drawable/img_lock"
                     android:ellipsize="end"
                     android:hint="@string/lbl_name_email_com"
-                    android:id="@+id/etEmail" android:inputType="text"
+                    android:id="@+id/Email" android:inputType="text"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="@dimen/_3pxh"
                     android:layout_marginTop="@dimen/_4pxv"
@@ -134,7 +132,7 @@
                     android:drawablePadding="@dimen/_12pxh"
                     android:drawableStart="@drawable/img_trophy"
                     android:ellipsize="end" android:hint="@string/lbl"
-                    android:id="@+id/etPassword"
+                    android:id="@+id/Password"
                     android:inputType="text"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="@dimen/_3pxh"
